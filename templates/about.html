@@ -4,16 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>My Website - About</title>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" />
 </head>
 
 <body>
-    <h1>Chavaughn Wilkins</h1>
-    <p>So basically I am a finalizing Computer Science student.</p>
-    <p>However I play League of Legends and I am a Kayn main and I always get trolled</p>
-    <img src="/res/Kayn.png" />
-    <p>Due to me always being trolled I started to play unfair champions (which I also enjoy) such as the true damage boss Sett</p>
-    <img src="/res/Sett.png" />
+    <div class="container">
+        <div class="content-box-border">
+            <h1 class="personName">Chavaughn Wilkins</h1>
+            <hr />
+            <p>So basically I am a finalizing Computer Science student.</p>
+            <p>However I play League of Legends and I am a Kayn main and I always get trolled</p>
+            <img src="{{url_for('static', filename='res/Kayn.png')}}" />
+            <p>Due to me always being trolled I started to play unfair champions (which I also enjoy) such as the true damage boss Sett</p>
+            <img src="{{url_for('static', filename='res/Sett.png')}}" />
+            <br />
+            <br />
+            <hr />
+            <p class="idNumber">ID: 620142333 ©</p>
+        </div>
+    </div>
 </body>
+<script src="{{url_for('static', filename='js/fade.js')}}"></script>
 
 </html>
